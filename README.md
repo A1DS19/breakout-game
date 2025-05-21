@@ -1,1 +1,1 @@
-### SFML game
+### "breakout" game built with SFML
