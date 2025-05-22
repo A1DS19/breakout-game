@@ -4,8 +4,7 @@
 #include "SFML/Graphics/Texture.hpp"
 
 background::background(float x, float y)
-    : texture("/home/dev/projects/breakout-game/assets/background.jpg"),
-      sprite(texture) {
+    : texture("../assets/background.jpg"), sprite(texture) {
   sprite.setPosition({x, y});
 }
 
