@@ -4,7 +4,7 @@
 #include "SFML/Graphics/Texture.hpp"
 
 background::background(float x, float y)
-    : texture("../assets/background.jpg"), sprite(texture) {
+    : texture("../assets/background.png"), sprite(texture) {
   sprite.setPosition({x, y});
 }
 
