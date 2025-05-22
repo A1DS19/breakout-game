@@ -2,9 +2,15 @@
 
 #include <SFML/Graphics.hpp>
 
+#include "SFML/Window/Keyboard.hpp"
+#include "background.hpp"
 #include "constants.hpp"
+#include "creature.hpp"
 
 int main() {
+  creature the_creature(constants::window_w / 2.0, constants::window_h / 2.0);
+  background the_background(0.0f, 0.0f);
+
   sf::RenderWindow game_window{
       sf::VideoMode({constants::window_w, constants::window_h}), "Breakout"};
 
@@ -17,7 +23,19 @@ int main() {
       }
     }
 
+    if (sf::Keyboard::isKeyPressed(sf::Keyboard::Key::Escape)) {
+      game_window.close();
+      break;
+    }
+
     game_window.clear(sf::Color::Black);
+
+    the_background.update();
+    the_background.draw(game_window);
+
+    // the_creature.update();
+    // the_creature.draw(game_window);
+
     game_window.display();
   }
 
