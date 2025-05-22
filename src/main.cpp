@@ -33,8 +33,8 @@ int main() {
     the_background.update();
     the_background.draw(game_window);
 
-    // the_creature.update();
-    // the_creature.draw(game_window);
+    the_creature.update();
+    the_creature.draw(game_window);
 
     game_window.display();
   }
