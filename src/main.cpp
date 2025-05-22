@@ -33,11 +33,11 @@ int main() {
     game_window.clear(sf::Color::Black);
 
     the_background.update();
-    // the_creature.update();
+    the_creature.update();
     the_ball.update();
 
     the_background.draw(game_window);
-    // the_creature.draw(game_window);
+    the_creature.draw(game_window);
     the_ball.draw(game_window);
 
     game_window.display();
