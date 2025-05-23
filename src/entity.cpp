@@ -14,3 +14,15 @@ float entity::x(const sf::Sprite &sprite) const noexcept {
 float entity::y(const sf::Sprite &sprite) const noexcept {
   return sprite.getPosition().y;
 }
+float entity::left(const sf::Sprite &sprite) const noexcept {
+  return x(sprite) - get_bounding_box(sprite).size.x / 2.0f;
+}
+float entity::right(const sf::Sprite &sprite) const noexcept {
+  return x(sprite) + get_bounding_box(sprite).size.x / 2.0f;
+}
+float entity::top(const sf::Sprite &sprite) const noexcept {
+  return y(sprite) - get_bounding_box(sprite).size.y / 2.0f;
+}
+float entity::bottom(const sf::Sprite &sprite) const noexcept {
+  return y(sprite) + get_bounding_box(sprite).size.y / 2.0f;
+}

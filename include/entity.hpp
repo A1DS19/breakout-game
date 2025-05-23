@@ -10,5 +10,10 @@ public:
   sf::Vector2f get_center(const sf::Sprite &sprite) const noexcept;
   float x(const sf::Sprite &sprite) const noexcept;
   float y(const sf::Sprite &sprite) const noexcept;
+  float left(const sf::Sprite &sprite) const noexcept;
+  float right(const sf::Sprite &sprite) const noexcept;
+  float top(const sf::Sprite &sprite) const noexcept;
+  float bottom(const sf::Sprite &sprite) const noexcept;
+
   virtual ~entity() = default;
 };

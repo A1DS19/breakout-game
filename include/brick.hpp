@@ -14,9 +14,5 @@ public:
   void draw(sf::RenderWindow &window) override;
   void update() override;
   void destroy() noexcept;
-  float left() const noexcept;
-  float right() const noexcept;
-  float top() const noexcept;
-  float bottom() const noexcept;
   bool is_destroyed() const noexcept;
 };
