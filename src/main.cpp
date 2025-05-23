@@ -7,6 +7,7 @@
 #include "ball.hpp"
 #include "constants.hpp"
 // #include "creature.hpp"
+#include "interactions.hpp"
 #include "paddle.hpp"
 
 int main() {
@@ -39,6 +40,7 @@ int main() {
     // the_creature.update();
     the_ball.update();
     the_paddle.update();
+    handle_collision(the_ball, the_paddle);
 
     the_background.draw(game_window);
     // the_creature.draw(game_window);

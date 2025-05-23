@@ -1,8 +1,7 @@
 #pragma once
 
 #include "ball.hpp"
-#include "entity.hpp"
 #include "paddle.hpp"
 
-bool is_interacting(const entity &e1, const entity &e2);
+bool is_interacting(const sf::FloatRect &e1, const sf::FloatRect &e2);
 void handle_collision(ball &b, const paddle &p);

@@ -4,12 +4,12 @@
 
 #include "moving_entity.hpp"
 
-class ball : moving_entity {
+class ball : public moving_entity {
   sf::Texture texture;
-  sf::Sprite sprite;
   inline static std::mt19937 mt{std::random_device{}()};
 
 public:
+  sf::Sprite sprite;
   ball();
   void draw(sf::RenderWindow &window) override;
   void update() override;
