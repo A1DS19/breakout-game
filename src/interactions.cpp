@@ -19,3 +19,12 @@ void handle_collision(ball &b, const paddle &p) {
     }
   }
 }
+
+void handle_collision(ball &b, brick &br) {
+  sf::FloatRect box_b = b.get_bounding_box(b.sprite);
+  sf::FloatRect box_br = br.get_bounding_box(br.sprite);
+
+  if (is_interacting(box_b, box_br)) {
+    br.destroy();
+  }
+}

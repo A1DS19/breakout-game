@@ -16,4 +16,5 @@ public:
   void move_up() noexcept;
   void move_left() noexcept;
   void move_right() noexcept;
+  void move_down() noexcept;
 };

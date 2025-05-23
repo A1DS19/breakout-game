@@ -1,6 +1,7 @@
 #include <stdlib.h>
 
 #include <SFML/Graphics.hpp>
+#include <algorithm>
 #include <memory>
 #include <stdexcept>
 #include <vector>
@@ -58,7 +59,16 @@ int main() {
     for (auto &brick : bricks) {
       brick.update();
     }
+
     handle_collision(the_ball, the_paddle);
+    for (auto &brick : bricks) {
+      handle_collision(the_ball, brick);
+    }
+
+    bricks.erase(
+        std::remove_if(std::begin(bricks), std::end(bricks),
+                       [](const brick &b) { return b.is_destroyed(); }),
+        std::end(bricks));
 
     the_background.draw(game_window);
     the_ball.draw(game_window);
