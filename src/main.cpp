@@ -6,12 +6,15 @@
 #include "background.hpp"
 #include "ball.hpp"
 #include "constants.hpp"
-#include "creature.hpp"
+// #include "creature.hpp"
+#include "paddle.hpp"
 
 int main() {
-  creature the_creature(constants::window_w / 2.0f, constants::window_h / 2.0f);
+  // creature the_creature(constants::window_w / 2.0f, constants::window_h
+  // / 2.0f);
   ball the_ball;
   background the_background(0.0f, 0.0f);
+  paddle the_paddle(constants::window_w / 2.0f, constants::window_h - 20.0f);
 
   sf::RenderWindow game_window{
       sf::VideoMode({constants::window_w, constants::window_h}), "Breakout"};
@@ -33,12 +36,14 @@ int main() {
     game_window.clear(sf::Color::Black);
 
     the_background.update();
-    the_creature.update();
+    // the_creature.update();
     the_ball.update();
+    the_paddle.update();
 
     the_background.draw(game_window);
-    the_creature.draw(game_window);
+    // the_creature.draw(game_window);
     the_ball.draw(game_window);
+    the_paddle.draw(game_window);
 
     game_window.display();
   }
