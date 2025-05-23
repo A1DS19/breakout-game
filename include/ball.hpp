@@ -13,4 +13,7 @@ public:
   ball();
   void draw(sf::RenderWindow &window) override;
   void update() override;
+  void move_up() noexcept;
+  void move_left() noexcept;
+  void move_right() noexcept;
 };
