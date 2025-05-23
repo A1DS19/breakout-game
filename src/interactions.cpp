@@ -20,6 +20,8 @@ void handle_collision(ball &b, const paddle &p) {
   }
 }
 
+// maybe add paddle if it was touched by ball then it can
+// destroy
 void handle_collision(ball &b, brick &br) {
   sf::FloatRect box_b = b.get_bounding_box(b.sprite);
   sf::FloatRect box_br = br.get_bounding_box(br.sprite);
